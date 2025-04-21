@@ -1,26 +1,10 @@
-function isEnoughCapacity(products, containerSize) {
-    let totalPrice = 0;
-    for (let key in products) {
-        totalPrice += products[key];
-    }
-    return totalPrice <= containerSize;
-    
-}
+const categories = document.querySelectorAll('#categories .item');
+console.log(`Number of categories: ${categories.length}`);
 
+categories.forEach((item) => {
+  const title = item.querySelector('h2').textContent;
+  const elementsCount = item.querySelectorAll('ul li').length;
 
-
-console.log(
-  isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
-); // true
-
-console.log(
-  isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
-); // false
-
-console.log(
-  isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
-); // true
-
-console.log(
-  isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
-); // false
+  console.log(`Category: ${title}`);
+  console.log(`Elements: ${elementsCount}`);
+});
