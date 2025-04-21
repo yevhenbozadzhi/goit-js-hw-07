@@ -14,3 +14,4 @@ form.addEventListener('submiit', function (event) {
     console.log(formData);
     form.reset();
 })
+
