@@ -6,6 +6,6 @@ nameInput.addEventListener("input", () => {
         nameOutput.textContent = "Anonymous";
     }
     else {
-        nameOutput.textContent = terimmedValue;
+        nameOutput.textContent = trimmedValue;
     }
 });
